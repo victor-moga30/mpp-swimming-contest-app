@@ -1,17 +1,43 @@
 package ro.mpp2026;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import ro.mpp2026.repository.db.ChildDbRepository;
+import ro.mpp2026.repository.db.EventDbRepository;
+import ro.mpp2026.repository.db.JdbcUtils;
+import ro.mpp2026.repository.db.RegistrationDbRepository;
+import ro.mpp2026.repository.db.UserDbRepository;
+import ro.mpp2026.service.ContestService;
+import ro.mpp2026.service.dto.EventParticipantsDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        JdbcUtils jdbcUtils = new JdbcUtils();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        ContestService service = new ContestService(
+                new UserDbRepository(jdbcUtils),
+                new ChildDbRepository(jdbcUtils),
+                new EventDbRepository(jdbcUtils),
+                new RegistrationDbRepository(jdbcUtils)
+        );
+
+        System.out.println(service.login("oficiu1", "1234"));
+
+        List<EventParticipantsDTO> events = service.getAllEventsWithParticipantsCount();
+        int i;
+        for (i = 0; i < events.size(); i++) {
+            System.out.println(events.get(i).getEventName() + " " +
+                    events.get(i).getDistance() + "m -> " +
+                    events.get(i).getParticipantsCount());
         }
+
+        List<Long> selectedEvents = new ArrayList<Long>();
+        selectedEvents.add(1L);
+        selectedEvents.add(2L);
+
+        service.registerChild("Ana Pop", "1234567890123", 7, selectedEvents);
+
+        System.out.println(service.getChildrenForEvent(1L));
     }
 }
