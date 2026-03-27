@@ -10,6 +10,7 @@ import ro.mpp2026.repository.RegistrationRepository;
 import ro.mpp2026.repository.UserRepository;
 import ro.mpp2026.service.dto.ChildRegistrationDTO;
 import ro.mpp2026.service.dto.EventParticipantsDTO;
+import ro.mpp2026.utils.PasswordUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,9 @@ public class ContestService {
             throw new ServiceException("Username inexistent.");
         }
 
-        if (!user.getPasswordHash().equals(password)) {
+        String hashedPassword = PasswordUtils.hashPassword(password);
+
+        if (!user.getPasswordHash().equals(hashedPassword)) {
             throw new ServiceException("Parola incorecta.");
         }
 

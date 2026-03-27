@@ -1,0 +1,837 @@
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 16:56:58 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 16:57:05 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 16:57:05 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.UserDbRepository - User found with username=oficiu1: User{id=1, username='oficiu1', passwordHash='1234', office='Centru'}
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findAll
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.EventDbRepository - findAll completed, 9 events loaded
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=2
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 0 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=6
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=7
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=8
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=9
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:06 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 3 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=1: Child{id=1, name='Ana Pop', cnp='1234567890123', age=7}
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=1: Event{id=1, name='50m', distance=50, minAge=6, maxAge=8}
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=2
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=2: Event{id=2, name='100m', distance=100, minAge=6, maxAge=8}
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=2
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=2: Child{id=2, name='Mara Ionescu', cnp='1234567890124', age=8}
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=2
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=2
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=1
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=1: Event{id=1, name='50m', distance=50, minAge=6, maxAge=8}
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=1
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=1: Child{id=1, name='Ana Pop', cnp='1234567890123', age=7}
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=2
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:16 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=2: Child{id=2, name='Mara Ionescu', cnp='1234567890124', age=8}
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 16:57:45 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 16:57:52 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 16:57:52 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 16:57:52 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 16:57:52 ERROR ro.mpp2026.repository.db.UserDbRepository - Error in findByUsername for username=oficiu1
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: users)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at ro.mpp2026.repository.db.UserDbRepository.findByUsername(UserDbRepository.java:28) ~[main/:?]
+	at ro.mpp2026.service.ContestService.login(ContestService.java:34) ~[main/:?]
+	at ro.mpp2026.ui.LoginController.handleLogin(LoginController.java:34) ~[main/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77) ~[javafx-base-17.0.10-win.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at javafx.base/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.fxml/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1854) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Node.fireEvent(Node.java:8792) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.controls/javafx.scene.control.Button.fire(Button.java:203) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3897) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1878) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2623) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:423) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:551) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:937) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:10:33 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.UserDbRepository - User found with username=oficiu1: User{id=1, username='oficiu1', passwordHash='1234', office='Centru'}
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findAll
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.EventDbRepository - findAll completed, 9 events loaded
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=2
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 0 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=6
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=7
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=8
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=9
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 3 registrations found
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=3
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=3: Child{id=3, name='Vlad Georgescu', cnp='1234567890125', age=10}
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=3
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:42 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=3: Event{id=3, name='50m', distance=50, minAge=9, maxAge=11}
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=3
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=3: Child{id=3, name='Vlad Georgescu', cnp='1234567890125', age=10}
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=3
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:47 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=3: Event{id=3, name='50m', distance=50, minAge=9, maxAge=11}
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=1: Child{id=1, name='Ana Pop', cnp='1234567890123', age=7}
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=1: Event{id=1, name='50m', distance=50, minAge=6, maxAge=8}
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=2
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=2: Event{id=2, name='100m', distance=100, minAge=6, maxAge=8}
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=2
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=2: Child{id=2, name='Mara Ionescu', cnp='1234567890124', age=8}
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=2
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=2
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=1
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:56 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=1: Event{id=1, name='50m', distance=50, minAge=6, maxAge=8}
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=3
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=3: Child{id=3, name='Vlad Georgescu', cnp='1234567890125', age=10}
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=3
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=3
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:57 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=3: Event{id=3, name='50m', distance=50, minAge=9, maxAge=11}
+2026-03-27 17:10:58 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:10:58 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:10:58 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:10:58 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 0 registrations found
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findByCnp with cnp=2345678901123
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - No child found with cnp=2345678901123
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering save with child=Child{id=0, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child saved successfully, affected rows=1
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findByCnp with cnp=2345678901123
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with cnp=2345678901123: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 0 registrations found
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=4
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=4: Event{id=4, name='100m', distance=100, minAge=9, maxAge=11}
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering save with registration=Registration{id=0, childId=9, eventId=4}
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:09 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Registration saved successfully, affected rows=1
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findAll
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.EventDbRepository - findAll completed, 9 events loaded
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=2
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=6
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=7
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=8
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=9
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:10 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 3 registrations found
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=9
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=9: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=4
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:11 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=4: Event{id=4, name='100m', distance=100, minAge=9, maxAge=11}
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findByCnp with cnp=2345678901123
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with cnp=2345678901123: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=9
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=9: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=4
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:17 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=4: Event{id=4, name='100m', distance=100, minAge=9, maxAge=11}
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=4
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=4: Child{id=4, name='Radu Muntean', cnp='1234567890126', age=11}
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=4
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=4
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=5
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:21 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=5: Event{id=5, name='1000m', distance=1000, minAge=9, maxAge=11}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findByCnp with cnp=2345678901123
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with cnp=2345678901123: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=4
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=4: Event{id=4, name='100m', distance=100, minAge=9, maxAge=11}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=5
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=5: Event{id=5, name='1000m', distance=1000, minAge=9, maxAge=11}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering delete with registration=Registration{id=16, childId=9, eventId=4}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Registration deleted successfully, affected rows=1
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering save with registration=Registration{id=0, childId=9, eventId=4}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Registration saved successfully, affected rows=1
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering save with registration=Registration{id=0, childId=9, eventId=5}
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:23 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Registration saved successfully, affected rows=1
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findAll
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.EventDbRepository - findAll completed, 9 events loaded
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=2
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=6
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=7
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=8
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=9
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:25 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 3 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=4
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=4: Child{id=4, name='Radu Muntean', cnp='1234567890126', age=11}
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=4
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=4
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 1 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=5
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=5: Event{id=5, name='1000m', distance=1000, minAge=9, maxAge=11}
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.ChildDbRepository - Entering findById with id=9
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.ChildDbRepository - Child found with id=9: Child{id=9, name='Lorena', cnp='2345678901123', age=10}
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByChildId with childId=9
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByChildId completed, 2 registrations found
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=4
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=4: Event{id=4, name='100m', distance=100, minAge=9, maxAge=11}
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findById with id=5
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:11:26 INFO  ro.mpp2026.repository.db.EventDbRepository - Event found with id=5: Event{id=5, name='1000m', distance=1000, minAge=9, maxAge=11}
+2026-03-27 17:13:10 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:13:10 ERROR ro.mpp2026.repository.db.JdbcUtils - Configuration file bd.config not found
+2026-03-27 17:13:10 ERROR ro.mpp2026.repository.db.JdbcUtils - Error loading database configuration
+java.lang.RuntimeException: Configuration file bd.config not found
+	at ro.mpp2026.repository.db.JdbcUtils.<init>(JdbcUtils.java:21) ~[main/:?]
+	at ro.mpp2026.StartApplication.start(StartApplication.java:19) ~[main/:?]
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2026-03-27 17:13:47 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:13:47 ERROR ro.mpp2026.repository.db.JdbcUtils - Configuration file bd.config not found
+2026-03-27 17:13:47 ERROR ro.mpp2026.repository.db.JdbcUtils - Error loading database configuration
+java.lang.RuntimeException: Configuration file bd.config not found
+	at ro.mpp2026.repository.db.JdbcUtils.<init>(JdbcUtils.java:21) ~[main/:?]
+	at ro.mpp2026.StartApplication.start(StartApplication.java:19) ~[main/:?]
+	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:456) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:17:24 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:18:53 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:21:02 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:21:08 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 17:21:08 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:21:09 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:21:09 ERROR ro.mpp2026.repository.db.UserDbRepository - Error in findByUsername for username=oficiu1
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: users)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at ro.mpp2026.repository.db.UserDbRepository.findByUsername(UserDbRepository.java:28) ~[main/:?]
+	at ro.mpp2026.service.ContestService.login(ContestService.java:35) ~[main/:?]
+	at ro.mpp2026.ui.LoginController.handleLogin(LoginController.java:34) ~[main/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77) ~[javafx-base-17.0.10-win.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at javafx.base/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.fxml/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1854) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Node.fireEvent(Node.java:8792) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.controls/javafx.scene.control.Button.fire(Button.java:203) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3897) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1878) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2623) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:423) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:551) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:937) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:22:21 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:22:28 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 17:22:28 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:22:28 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:22:28 ERROR ro.mpp2026.repository.db.UserDbRepository - Error in findByUsername for username=oficiu1
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: users)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at ro.mpp2026.repository.db.UserDbRepository.findByUsername(UserDbRepository.java:28) ~[main/:?]
+	at ro.mpp2026.service.ContestService.login(ContestService.java:35) ~[main/:?]
+	at ro.mpp2026.ui.LoginController.handleLogin(LoginController.java:34) ~[main/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77) ~[javafx-base-17.0.10-win.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at javafx.base/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:275) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.fxml/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1854) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.fxml/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724) ~[javafx-fxml-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Node.fireEvent(Node.java:8792) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.controls/javafx.scene.control.Button.fire(Button.java:203) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:208) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.controls/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274) ~[javafx-controls-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198) ~[javafx-base-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3897) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1878) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2623) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:423) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:551) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:937) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[javafx-graphics-17.0.10-win.jar:?]
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184) ~[javafx-graphics-17.0.10-win.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.JdbcUtils - Initializing JdbcUtils
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.JdbcUtils - Database configuration loaded successfully
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.UserDbRepository - Initializing UserDbRepository
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.ChildDbRepository - Initializing ChildDbRepository
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.EventDbRepository - Initializing EventDbRepository
+2026-03-27 17:23:32 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Initializing RegistrationDbRepository
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.UserDbRepository - Entering findByUsername with username=oficiu1
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.UserDbRepository - User found with username=oficiu1: User{id=1, username='oficiu1', passwordHash='03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', office='Centru'}
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.EventDbRepository - Entering findAll
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.EventDbRepository - findAll completed, 9 events loaded
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=1
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=2
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=3
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=4
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=5
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=6
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=7
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 1 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=8
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 2 registrations found
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - Entering findByEventId with eventId=9
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Getting database connection
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.JdbcUtils - Database connection established successfully
+2026-03-27 17:23:40 INFO  ro.mpp2026.repository.db.RegistrationDbRepository - findByEventId completed, 3 registrations found

@@ -2,10 +2,6 @@ package ro.mpp2026.repository;
 
 import ro.mpp2026.model.Child;
 
-public interface ChildRepository {
+public interface ChildRepository extends Repository<Long, Child> {
     Child findByCnp(String cnp);
-
-    Child findById(long id);
-
-    void save(Child child);
 }

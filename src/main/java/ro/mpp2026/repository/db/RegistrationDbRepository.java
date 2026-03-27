@@ -120,4 +120,37 @@ public class RegistrationDbRepository implements RegistrationRepository {
             throw new RuntimeException("Error deleting registration", e);
         }
     }
+
+    @Override
+    public Registration findById(Long id) {
+        logger.info("Entering findById with id={}", id);
+        String sql = "SELECT id, child_id, event_id FROM registrations WHERE id = ?";
+
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setLong(1, id);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    Registration registration = new Registration(
+                            resultSet.getLong("id"),
+                            resultSet.getLong("child_id"),
+                            resultSet.getLong("event_id")
+                    );
+                    logger.info("Registration found with id={}: {}", id, registration);
+                    return registration;
+                }
+            }
+
+        } catch (SQLException e) {
+            logger.error("Error in findById for id={}", id, e);
+            throw new RuntimeException("Error finding registration by id", e);
+        }
+
+        logger.info("No registration found with id={}", id);
+        return null;
+    }
+
+
 }

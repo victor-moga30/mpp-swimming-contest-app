@@ -22,7 +22,7 @@ public class EventDbRepository implements EventRepository {
     }
 
     @Override
-    public Event findById(long id) {
+    public Event findById(Long id) {
         logger.info("Entering findById with id={}", id);
         String sql = "SELECT id, name, distance, min_age, max_age FROM events WHERE id = ?";
 
@@ -81,5 +81,10 @@ public class EventDbRepository implements EventRepository {
         }
 
         return events;
+    }
+
+    @Override
+    public void save(Event event) {
+        throw new UnsupportedOperationException("Save not supported for events");
     }
 }

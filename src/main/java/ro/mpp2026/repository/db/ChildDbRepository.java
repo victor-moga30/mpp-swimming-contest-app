@@ -51,7 +51,7 @@ public class ChildDbRepository implements ChildRepository {
     }
 
     @Override
-    public Child findById(long id) {
+    public Child findById(Long id) {
         logger.info("Entering findById with id={}", id);
         String sql = "SELECT id, name, cnp, age FROM children WHERE id = ?";
 
