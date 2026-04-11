@@ -4,35 +4,40 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ro.mpp2026.repository.db.ChildDbRepository;
-import ro.mpp2026.repository.db.EventDbRepository;
-import ro.mpp2026.repository.db.JdbcUtils;
-import ro.mpp2026.repository.db.RegistrationDbRepository;
-import ro.mpp2026.repository.db.UserDbRepository;
-import ro.mpp2026.service.ContestService;
+import ro.mpp2026.network.objectprotocol.ContestServicesObjectProxy;
+import ro.mpp2026.service.IContestServices;
 import ro.mpp2026.ui.LoginController;
+
+import java.io.InputStream;
+import java.util.Properties;
 
 public class StartApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        JdbcUtils jdbcUtils = new JdbcUtils();
+        Properties properties = new Properties();
+        try (InputStream input = StartApplication.class.getClassLoader().getResourceAsStream("server.properties")) {
+            if (input != null) {
+                properties.load(input);
+            }
+        }
 
-        ContestService service = new ContestService(
-                new UserDbRepository(jdbcUtils),
-                new ChildDbRepository(jdbcUtils),
-                new EventDbRepository(jdbcUtils),
-                new RegistrationDbRepository(jdbcUtils)
-        );
+        String host = properties.getProperty("server.host", "127.0.0.1");
+        int port = Integer.parseInt(properties.getProperty("server.port", "55556"));
+
+        IContestServices service = new ContestServicesObjectProxy(host, port);
 
         FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("/login-view.fxml"));
-        Scene scene = new Scene(loader.load());
+        Scene scene = new Scene(loader.load(), 420, 260);
 
         LoginController controller = loader.getController();
         controller.setService(service);
 
         primaryStage.setTitle("MPP Contest - Login");
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(420);
+        primaryStage.setMinHeight(260);
+        primaryStage.centerOnScreen();
         primaryStage.show();
     }
 

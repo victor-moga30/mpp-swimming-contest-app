@@ -9,11 +9,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import ro.mpp2026.StartApplication;
 import ro.mpp2026.model.User;
-import ro.mpp2026.service.ContestService;
+import ro.mpp2026.service.IContestServices;
 import ro.mpp2026.service.ServiceException;
 
 public class LoginController {
-    private ContestService service;
+    private IContestServices service;
 
     @FXML
     private TextField usernameField;
@@ -21,7 +21,7 @@ public class LoginController {
     @FXML
     private PasswordField passwordField;
 
-    public void setService(ContestService service) {
+    public void setService(IContestServices service) {
         this.service = service;
     }
 
@@ -31,17 +31,18 @@ public class LoginController {
         String password = passwordField.getText();
 
         try {
-            User user = service.login(username, password);
-
             FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("/main-view.fxml"));
-            Scene scene = new Scene(loader.load());
-
+            Scene scene = new Scene(loader.load(), 900, 700);
             MainController mainController = loader.getController();
+            User user = service.login(username, password, mainController);
             mainController.setService(service, user);
 
             Stage stage = new Stage();
             stage.setTitle("MPP Contest - Main");
             stage.setScene(scene);
+            stage.setMinWidth(850);
+            stage.setMinHeight(650);
+            stage.centerOnScreen();
             stage.show();
 
             Stage currentStage = (Stage) usernameField.getScene().getWindow();

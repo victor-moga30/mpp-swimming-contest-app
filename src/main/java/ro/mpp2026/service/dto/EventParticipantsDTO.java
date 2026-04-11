@@ -1,6 +1,8 @@
 package ro.mpp2026.service.dto;
 
-public class EventParticipantsDTO {
+import java.io.Serializable;
+
+public class EventParticipantsDTO implements Serializable {
     private long eventId;
     private String eventName;
     private int distance;

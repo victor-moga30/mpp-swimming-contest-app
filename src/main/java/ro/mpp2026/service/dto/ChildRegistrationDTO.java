@@ -1,6 +1,8 @@
 package ro.mpp2026.service.dto;
 
-public class ChildRegistrationDTO {
+import java.io.Serializable;
+
+public class ChildRegistrationDTO implements Serializable {
     private long childId;
     private String childName;
     private String cnp;

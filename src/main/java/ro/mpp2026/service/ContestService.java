@@ -8,18 +8,22 @@ import ro.mpp2026.repository.ChildRepository;
 import ro.mpp2026.repository.EventRepository;
 import ro.mpp2026.repository.RegistrationRepository;
 import ro.mpp2026.repository.UserRepository;
+import ro.mpp2026.service.dto.ChildDTO;
 import ro.mpp2026.service.dto.ChildRegistrationDTO;
 import ro.mpp2026.service.dto.EventParticipantsDTO;
 import ro.mpp2026.utils.PasswordUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class ContestService {
+public class ContestService implements IContestServices {
     private final UserRepository userRepository;
     private final ChildRepository childRepository;
     private final EventRepository eventRepository;
     private final RegistrationRepository registrationRepository;
+    private final Map<String, IContestObserver> loggedClients = new ConcurrentHashMap<String, IContestObserver>();
 
     public ContestService(UserRepository userRepository,
                           ChildRepository childRepository,
@@ -31,22 +35,36 @@ public class ContestService {
         this.registrationRepository = registrationRepository;
     }
 
-    public User login(String username, String password) {
-        User user = userRepository.findByUsername(username);
-        if (user == null) {
-            throw new ServiceException("Username inexistent.");
+    public synchronized User login(String username, String password) {
+        return authenticate(username, password);
+    }
+
+    @Override
+    public synchronized User login(String username, String password, IContestObserver observer) {
+        User user = authenticate(username, password);
+
+        if (loggedClients.containsKey(username)) {
+            throw new ServiceException("Utilizatorul este deja logat.");
         }
 
-        String hashedPassword = PasswordUtils.hashPassword(password);
-
-        if (!user.getPasswordHash().equals(hashedPassword)) {
-            throw new ServiceException("Parola incorecta.");
-        }
-
+        loggedClients.put(username, observer);
         return user;
     }
 
-    public List<EventParticipantsDTO> getAllEventsWithParticipantsCount() {
+    @Override
+    public synchronized void logout(User user, IContestObserver observer) {
+        if (user == null) {
+            return;
+        }
+
+        IContestObserver removed = loggedClients.remove(user.getUsername());
+        if (removed == null) {
+            throw new ServiceException("Utilizatorul nu este logat.");
+        }
+    }
+
+    @Override
+    public synchronized List<EventParticipantsDTO> getAllEventsWithParticipantsCount() {
         List<Event> events = eventRepository.findAll();
         List<EventParticipantsDTO> result = new ArrayList<EventParticipantsDTO>();
 
@@ -68,7 +86,8 @@ public class ContestService {
         return result;
     }
 
-    public List<ChildRegistrationDTO> getChildrenForEvent(long eventId) {
+    @Override
+    public synchronized List<ChildRegistrationDTO> getChildrenForEvent(long eventId) {
         List<Registration> registrations = registrationRepository.findByEventId(eventId);
         List<ChildRegistrationDTO> result = new ArrayList<ChildRegistrationDTO>();
 
@@ -85,7 +104,8 @@ public class ContestService {
         return result;
     }
 
-    public List<ChildRegistrationDTO> searchChildren(long eventId, int minAge, int maxAge) {
+    @Override
+    public synchronized List<ChildRegistrationDTO> searchChildren(long eventId, int minAge, int maxAge) {
         List<Registration> registrations = registrationRepository.findByEventId(eventId);
         List<ChildRegistrationDTO> result = new ArrayList<ChildRegistrationDTO>();
 
@@ -101,8 +121,22 @@ public class ContestService {
 
         return result;
     }
+    @Override
+    public synchronized ChildDTO getChildByCnp(String cnp) {
+        if (cnp == null || cnp.trim().isEmpty()) {
+            throw new ServiceException("CNP-ul nu poate fi gol.");
+        }
 
-    public void registerChild(String name, String cnp, int age, List<Long> eventIds) {
+        Child child = childRepository.findByCnp(cnp);
+        if (child == null) {
+            throw new ServiceException("Nu exista copil cu acest CNP.");
+        }
+
+        return new ChildDTO(child.getId(), child.getName(), child.getCnp(), child.getAge());
+    }
+
+    @Override
+    public synchronized void registerChild(String name, String cnp, int age, List<Long> eventIds) {
         validateChildData(name, cnp, age);
         validateSelectedEvents(eventIds);
 
@@ -148,9 +182,12 @@ public class ContestService {
         for (i = 0; i < eventIds.size(); i++) {
             registrationRepository.save(new Registration(0, child.getId(), eventIds.get(i)));
         }
+
+        notifyAllClients();
     }
 
-    public List<Long> getEventIdsForChild(String cnp) {
+    @Override
+    public synchronized List<Long> getEventIdsForChild(String cnp) {
         if (cnp == null || cnp.trim().isEmpty()) {
             throw new ServiceException("CNP-ul nu poate fi gol.");
         }
@@ -171,7 +208,8 @@ public class ContestService {
         return result;
     }
 
-    public void updateChildRegistrations(String cnp, List<Long> newEventIds) {
+    @Override
+    public synchronized void updateChildRegistrations(String cnp, List<Long> newEventIds) {
         if (cnp == null || cnp.trim().isEmpty()) {
             throw new ServiceException("CNP-ul nu poate fi gol.");
         }
@@ -204,10 +242,26 @@ public class ContestService {
         for (i = 0; i < newEventIds.size(); i++) {
             registrationRepository.save(new Registration(0, child.getId(), newEventIds.get(i)));
         }
+
+        notifyAllClients();
+    }
+
+    private User authenticate(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            throw new ServiceException("Username inexistent.");
+        }
+
+        String hashedPassword = PasswordUtils.hashPassword(password);
+
+        if (!user.getPasswordHash().equals(hashedPassword)) {
+            throw new ServiceException("Parola incorecta.");
+        }
+
+        return user;
     }
 
     private ChildRegistrationDTO buildChildRegistrationDTO(Child child) {
-        List<Registration> registrations = registrationRepository.findByChildId(child.getId());
         String eventsText = buildEventsTextForChild(child.getId());
 
         return new ChildRegistrationDTO(
@@ -284,5 +338,22 @@ public class ContestService {
         }
 
         return builder.toString();
+    }
+
+    private void notifyAllClients() {
+        List<String> failedUsers = new ArrayList<String>();
+
+        for (Map.Entry<String, IContestObserver> entry : loggedClients.entrySet()) {
+            try {
+                entry.getValue().contestDataUpdated();
+            } catch (Exception e) {
+                failedUsers.add(entry.getKey());
+            }
+        }
+
+        int i;
+        for (i = 0; i < failedUsers.size(); i++) {
+            loggedClients.remove(failedUsers.get(i));
+        }
     }
 }

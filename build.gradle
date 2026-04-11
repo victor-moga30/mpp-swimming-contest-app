@@ -25,17 +25,22 @@ dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
     implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
     implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
-    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
-    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
 }
 
 javafx {
     version = '17.0.10'
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    modules = ['javafx.controls', 'javafx.fxml']
 }
 
 application {
     mainClass = 'ro.mpp2026.StartApplication'
+}
+
+tasks.register('runServer', JavaExec) {
+    group = 'application'
+    description = 'Porneste serverul de socket-uri'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'ro.mpp2026.server.StartObjectServer'
 }
 
 test {
