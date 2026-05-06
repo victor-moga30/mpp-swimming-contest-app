@@ -1,48 +1,35 @@
 plugins {
     id 'java'
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group = 'ro.mpp2026'
 version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+allprojects {
+    repositories {
+        mavenCentral()
     }
 }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+subprojects {
+    apply plugin: 'java'
 
-    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
-    implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
-    implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
-}
+    group = 'ro.mpp2026'
+    version = '1.0-SNAPSHOT'
 
-javafx {
-    version = '17.0.10'
-    modules = ['javafx.controls', 'javafx.fxml']
-}
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
 
-application {
-    mainClass = 'ro.mpp2026.StartApplication'
-}
+    dependencies {
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
 
-tasks.register('runServer', JavaExec) {
-    group = 'application'
-    description = 'Porneste serverul de socket-uri'
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'ro.mpp2026.server.StartObjectServer'
-}
-
-test {
-    useJUnitPlatform()
+    test {
+        useJUnitPlatform()
+    }
 }
