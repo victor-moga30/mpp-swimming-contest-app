@@ -2,11 +2,11 @@ package ro.mpp2026.server;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import ro.mpp2026.repository.db.ChildDbRepository;
-import ro.mpp2026.repository.db.EventDbRepository;
-import ro.mpp2026.repository.db.JdbcUtils;
-import ro.mpp2026.repository.db.RegistrationDbRepository;
-import ro.mpp2026.repository.db.UserDbRepository;
+import ro.mpp2026.repository.hibernate.ChildHibernateRepository;
+import ro.mpp2026.repository.hibernate.EventHibernateRepository;
+import ro.mpp2026.repository.hibernate.HibernateUtils;
+import ro.mpp2026.repository.hibernate.RegistrationHibernateRepository;
+import ro.mpp2026.repository.hibernate.UserHibernateRepository;
 import ro.mpp2026.service.ContestService;
 import ro.mpp2026.service.IContestServices;
 
@@ -14,13 +14,11 @@ public class StartGrpcServer {
     public static void main(String[] args) {
         int port = 55556;
 
-        JdbcUtils jdbcUtils = new JdbcUtils();
-
         IContestServices service = new ContestService(
-                new UserDbRepository(jdbcUtils),
-                new ChildDbRepository(jdbcUtils),
-                new EventDbRepository(jdbcUtils),
-                new RegistrationDbRepository(jdbcUtils)
+                new UserHibernateRepository(),
+                new ChildHibernateRepository(),
+                new EventHibernateRepository(),
+                new RegistrationHibernateRepository()
         );
 
         try {
@@ -34,6 +32,8 @@ public class StartGrpcServer {
             server.awaitTermination();
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            HibernateUtils.close();
         }
     }
 }

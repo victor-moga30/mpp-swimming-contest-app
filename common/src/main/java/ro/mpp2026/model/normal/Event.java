@@ -1,29 +1,10 @@
-package ro.mpp2026.model;
+package ro.mpp2026.model.normal;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "events")
 public class Event {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "distance", nullable = false)
     private int distance;
-
-    @Column(name = "min_age", nullable = false)
     private int minAge;
-
-    @Column(name = "max_age", nullable = false)
     private int maxAge;
 
     public Event() {

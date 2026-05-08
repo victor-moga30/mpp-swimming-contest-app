@@ -143,7 +143,7 @@ ContestRpcGrpc.ContestRpcImplBase
 
 si implementeaza metodele definite in `.proto`, apelând logica existenta din `ContestService`.
 
-Serverul este pornit din clasa:
+Serverulz este pornit din clasa:
 
 ro.mpp2026.server.StartGrpcServer
 

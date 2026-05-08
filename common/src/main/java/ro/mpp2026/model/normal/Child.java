@@ -1,26 +1,9 @@
-package ro.mpp2026.model;
+package ro.mpp2026.model.normal;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "children")
 public class Child {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "cnp", nullable = false, unique = true)
     private String cnp;
-
-    @Column(name = "age", nullable = false)
     private int age;
 
     public Child() {

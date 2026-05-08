@@ -1,7 +1,11 @@
 package ro.mpp2026.server;
 
 import ro.mpp2026.network.objectprotocol.ContestClientObjectWorker;
-import ro.mpp2026.repository.db.*;
+import ro.mpp2026.repository.hibernate.ChildHibernateRepository;
+import ro.mpp2026.repository.hibernate.EventHibernateRepository;
+import ro.mpp2026.repository.hibernate.HibernateUtils;
+import ro.mpp2026.repository.hibernate.RegistrationHibernateRepository;
+import ro.mpp2026.repository.hibernate.UserHibernateRepository;
 import ro.mpp2026.service.ContestService;
 import ro.mpp2026.service.IContestServices;
 
@@ -13,6 +17,7 @@ import java.util.Properties;
 public class StartObjectServer {
     public static void main(String[] args) {
         Properties properties = new Properties();
+
         try (InputStream inputStream = StartObjectServer.class.getClassLoader().getResourceAsStream("server.properties")) {
             if (inputStream != null) {
                 properties.load(inputStream);
@@ -22,12 +27,11 @@ public class StartObjectServer {
 
         int port = Integer.parseInt(properties.getProperty("server.port", "55556"));
 
-        JdbcUtils jdbcUtils = new JdbcUtils();
         IContestServices service = new ContestService(
-                new UserDbRepository(jdbcUtils),
-                new ChildDbRepository(jdbcUtils),
-                new EventDbRepository(jdbcUtils),
-                new RegistrationDbRepository(jdbcUtils)
+                new UserHibernateRepository(),
+                new ChildHibernateRepository(),
+                new EventHibernateRepository(),
+                new RegistrationHibernateRepository()
         );
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -42,6 +46,8 @@ public class StartObjectServer {
         } catch (Exception e) {
             System.out.println("Eroare la server: " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            HibernateUtils.close();
         }
     }
 }
