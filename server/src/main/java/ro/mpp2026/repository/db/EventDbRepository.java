@@ -57,7 +57,7 @@ public class EventDbRepository implements EventRepository {
     public List<Event> findAll() {
         logger.info("Entering findAll");
         List<Event> events = new ArrayList<>();
-        String sql = "SELECT id, name, distance, min_age, max_age FROM events";
+        String sql = "SELECT id, name, distance, min_age, max_age FROM events ORDER BY id";
 
         try (Connection connection = jdbcUtils.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);
@@ -84,7 +84,108 @@ public class EventDbRepository implements EventRepository {
     }
 
     @Override
+    public List<Event> findByDistance(int distance) {
+        logger.info("Entering findByDistance with distance={}", distance);
+
+        List<Event> events = new ArrayList<>();
+        String sql = "SELECT id, name, distance, min_age, max_age FROM events WHERE distance = ? ORDER BY id";
+
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, distance);
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    Event event = new Event(
+                            resultSet.getLong("id"),
+                            resultSet.getString("name"),
+                            resultSet.getInt("distance"),
+                            resultSet.getInt("min_age"),
+                            resultSet.getInt("max_age")
+                    );
+                    events.add(event);
+                }
+            }
+
+            logger.info("findByDistance completed, {} events loaded", events.size());
+        } catch (SQLException e) {
+            logger.error("Error in findByDistance for distance={}", distance, e);
+            throw new RuntimeException("Error finding events by distance", e);
+        }
+
+        return events;
+    }
+
+    @Override
     public void save(Event event) {
-        throw new UnsupportedOperationException("Save not supported for events");
+        logger.info("Entering save with event={}", event);
+
+        String sql = "INSERT INTO events(name, distance, min_age, max_age) VALUES (?, ?, ?, ?)";
+
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, event.getName());
+            statement.setInt(2, event.getDistance());
+            statement.setInt(3, event.getMinAge());
+            statement.setInt(4, event.getMaxAge());
+
+            statement.executeUpdate();
+
+            logger.info("Event saved successfully: {}", event);
+        } catch (SQLException e) {
+            logger.error("Error in save for event={}", event, e);
+            throw new RuntimeException("Error saving event", e);
+        }
+    }
+
+    @Override
+    public Event update(Event event) {
+        logger.info("Entering update with event={}", event);
+
+        String sql = "UPDATE events SET name = ?, distance = ?, min_age = ?, max_age = ? WHERE id = ?";
+
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, event.getName());
+            statement.setInt(2, event.getDistance());
+            statement.setInt(3, event.getMinAge());
+            statement.setInt(4, event.getMaxAge());
+            statement.setLong(5, event.getId());
+
+            int affectedRows = statement.executeUpdate();
+
+            if (affectedRows == 0) {
+                logger.info("No event updated because id={} was not found", event.getId());
+                return null;
+            }
+
+            logger.info("Event updated successfully: {}", event);
+            return findById(event.getId());
+        } catch (SQLException e) {
+            logger.error("Error in update for event={}", event, e);
+            throw new RuntimeException("Error updating event", e);
+        }
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        logger.info("Entering deleteById with id={}", id);
+
+        String sql = "DELETE FROM events WHERE id = ?";
+
+        try (Connection connection = jdbcUtils.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setLong(1, id);
+            int affectedRows = statement.executeUpdate();
+
+            logger.info("deleteById completed, affected rows={}", affectedRows);
+        } catch (SQLException e) {
+            logger.error("Error in deleteById for id={}", id, e);
+            throw new RuntimeException("Error deleting event", e);
+        }
     }
 }

@@ -6,4 +6,10 @@ import java.util.List;
 
 public interface EventRepository extends Repository<Long, Event> {
     List<Event> findAll();
+
+    List<Event> findByDistance(int distance);
+
+    Event update(Event event);
+
+    void deleteById(Long id);
 }
