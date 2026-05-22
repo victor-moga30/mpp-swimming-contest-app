@@ -42,3 +42,7 @@ src/main/resources/bd.config
 
 ### Mac OS ###
 .DS_Store
+
+node_modules/
+web-client-react/node_modules/
+web-client-react/dist/
