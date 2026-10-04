@@ -1,1 +1,7 @@
 rootProject.name = 'Problema8Java'
+
+include 'common'
+include 'server'
+include 'client'
+include 'rest-server'
+include 'rest-client-java'

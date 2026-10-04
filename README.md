@@ -121,3 +121,38 @@ Urmeaza sa fie implementate:
 - conectarea la baza de date SQLite
 - serviciile aplicatiei
 - interfata grafica
+## Implementare gRPC - Java (Server)
+
+Serverul este implementat in Java si foloseste gRPC pentru a expune functionalitatea aplicatiei.
+
+Fisierul `contest.proto` defineste contractul de comunicare (mesaje si metode RPC). Acesta se afla in:
+
+common/src/main/proto/contest.proto
+
+Pe baza acestuia, Gradle genereaza automat clasele Java necesare (stub-uri gRPC), folosind pluginul:
+
+com.google.protobuf
+
+Clasele generate sunt folosite in implementarea serviciului:
+
+ro.mpp2026.server.ContestGrpcService
+
+Aceasta clasa extinde:
+
+ContestRpcGrpc.ContestRpcImplBase
+
+si implementeaza metodele definite in `.proto`, apelând logica existenta din `ContestService`.
+
+Serverulz este pornit din clasa:
+
+ro.mpp2026.server.StartGrpcServer
+
+si ruleaza pe portul:
+
+55556
+
+Pentru notificari in timp real se foloseste streaming gRPC (server → client), prin metoda:
+
+SubscribeUpdates
+
+Serverul pastreaza lista clientilor conectati si trimite notificari atunci cand apar modificari (ex: inscriere copil).

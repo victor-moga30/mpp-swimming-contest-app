@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ro.mpp2026.ui.MainController"
+      prefWidth="1400.0" prefHeight="850.0">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label fx:id="welcomeLabel" text="Logged in as:" />
+        <Button text="Logout" onAction="#handleLogout"/>
+        <Button text="Refresh" onAction="#handleRefresh"/>
+    </HBox>
+
+    <SplitPane dividerPositions="0.32" VBox.vgrow="ALWAYS">
+        <items>
+            <ScrollPane fitToWidth="true" pannable="true">
+                <content>
+                    <VBox spacing="12" prefWidth="360">
+                        <padding>
+                            <Insets top="5" right="5" bottom="5" left="5"/>
+                        </padding>
+
+                        <Label text="Events"/>
+
+                        <TableView fx:id="eventsTable" prefHeight="250">
+                            <columns>
+                                <TableColumn fx:id="eventIdColumn" text="ID" prefWidth="50"/>
+                                <TableColumn fx:id="eventNameColumn" text="Event" prefWidth="180"/>
+                                <TableColumn fx:id="eventMinAgeColumn" text="Min Age" prefWidth="70"/>
+                                <TableColumn fx:id="eventMaxAgeColumn" text="Max Age" prefWidth="70"/>
+                                <TableColumn fx:id="eventParticipantsColumn" text="Participants" prefWidth="95"/>
+                            </columns>
+                        </TableView>
+
+                        <VBox spacing="8">
+                            <Label text="Search children"/>
+                            <ComboBox fx:id="searchAgeGroupCombo" promptText="Select age group" prefWidth="180"/>
+                            <ComboBox fx:id="searchDistanceCombo" promptText="Select distance" prefWidth="180"/>
+
+                            <HBox spacing="8">
+                                <Button text="Search" onAction="#handleSearch"/>
+                                <Button text="Show children for selected event" onAction="#handleShowSelectedEventChildren"/>
+                            </HBox>
+                        </VBox>
+
+                        <VBox spacing="8">
+                            <Label text="Register child"/>
+                            <TextField fx:id="nameField" promptText="Name"/>
+                            <TextField fx:id="cnpField" promptText="CNP"/>
+                            <TextField fx:id="ageField" promptText="Age"/>
+
+                            <Label text="Choose up to 2 events"/>
+
+                            <TableView fx:id="registerEventsTable" prefHeight="180">
+                                <columns>
+                                    <TableColumn fx:id="registerSelectColumn" text="Select" prefWidth="60"/>
+                                    <TableColumn fx:id="registerEventNameColumn" text="Event" prefWidth="220"/>
+                                    <TableColumn fx:id="registerAgeColumn" text="Age Group" prefWidth="140"/>
+                                </columns>
+                            </TableView>
+
+                            <Button text="Register child" onAction="#handleRegisterChild"/>
+                        </VBox>
+
+                        <VBox spacing="8">
+                            <Label text="Modify registrations"/>
+                            <TextField fx:id="modifyCnpField" promptText="Child CNP"/>
+                            <Button text="Load child events" onAction="#handleLoadChildEvents"/>
+
+                            <TableView fx:id="modifyEventsTable" prefHeight="180">
+                                <columns>
+                                    <TableColumn fx:id="modifySelectColumn" text="Selected" prefWidth="70"/>
+                                    <TableColumn fx:id="modifyEventNameColumn" text="Event" prefWidth="220"/>
+                                    <TableColumn fx:id="modifyAgeColumn" text="Age Group" prefWidth="140"/>
+                                </columns>
+                            </TableView>
+
+                            <Button text="Save changes" onAction="#handleModifyChild"/>
+                        </VBox>
+                    </VBox>
+                </content>
+            </ScrollPane>
+
+            <VBox spacing="8">
+                <Label text="Children"/>
+                <TableView fx:id="childrenTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="childIdColumn" text="ID" prefWidth="70"/>
+                        <TableColumn fx:id="childNameColumn" text="Name" prefWidth="190"/>
+                        <TableColumn fx:id="childCnpColumn" text="CNP" prefWidth="190"/>
+                        <TableColumn fx:id="childAgeColumn" text="Age" prefWidth="70"/>
+                        <TableColumn fx:id="childEventsColumn" text="Registered events" prefWidth="280"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </items>
+    </SplitPane>
+</VBox>

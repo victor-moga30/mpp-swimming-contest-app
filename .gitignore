@@ -28,6 +28,7 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+src/main/resources/bd.config
 
 ### NetBeans ###
 /nbproject/private/
@@ -41,3 +42,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+node_modules/
+web-client-react/node_modules/
+web-client-react/dist/
