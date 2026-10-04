@@ -1,158 +1,234 @@
-# MPP – Problema 8 (Java)
+# Swimming Contest Management Application
 
-Acest repository contine implementarea partiala a problemei 8 din cadrul laboratorului MPP.  
-In aceasta etapa este implementat **modelul domeniului si interfetele repository** pentru accesul la date.
+A full-stack client-server application for managing registrations and events in a swimming competition.
 
-Aplicatia modeleaza un sistem pentru **gestionarea inscrierilor copiilor la un concurs de atletism**.
+The project was developed as part of the **Systems for Design and Implementation (MPP)** course and progressively extended from a Java desktop application into a distributed system with **gRPC communication, persistence, REST services, authentication, real-time notifications, and a React web client**.
 
----
+## Features
 
-# Structura proiectului
+- User authentication for competition operators
+- Management of swimming contest events
+- Registration of participants for eligible events
+- Age-based event eligibility validation
+- Search and filtering of participants and events
+- Persistent storage using SQLite
+- Hibernate ORM for database persistence
+- Desktop client built with JavaFX
+- Client-server communication using gRPC and Protocol Buffers
+- Real-time server-to-client updates using gRPC streaming
+- REST API implemented with Spring Boot
+- JWT-based authentication and authorization
+- WebSocket support for real-time web notifications
+- React web interface for interacting with REST services
+- Dedicated Java client for testing and consuming the REST API
 
-Proiectul este organizat in doua pachete principale:
+## Architecture
 
+The application follows a modular client-server architecture.
+
+```text
+mpp-swimming-contest-app
+│
+├── common
+│   ├── Domain models
+│   ├── DTOs
+│   ├── Repository interfaces
+│   └── Protocol Buffer / gRPC definitions
+│
+├── server
+│   ├── Business logic
+│   ├── Repository implementations
+│   ├── Hibernate persistence
+│   └── gRPC server
+│
+├── client
+│   └── JavaFX desktop client
+│
+├── rest-server
+│   ├── Spring Boot REST API
+│   ├── Spring Security
+│   ├── JWT authentication
+│   └── WebSocket notifications
+│
+├── rest-client-java
+│   └── Java REST client
+│
+└── web-client-react
+    └── React + Vite web client
 ```
-ro.mpp2026
- ├── model
- └── repository
+
+The shared `common` module contains the domain model and communication contracts used by the Java components.
+
+The desktop application communicates with the server through **gRPC**, while the web application interacts with the system through the **Spring Boot REST API**.
+
+## Technologies
+
+**Backend**
+- Java 17
+- Spring Boot 3
+- Spring Security
+- Hibernate ORM
+- SQLite
+- gRPC
+- Protocol Buffers
+- WebSockets
+- JWT
+- Log4j2
+
+**Desktop**
+- JavaFX
+
+**Frontend**
+- React 19
+- Vite
+- JavaScript
+
+**Build & Testing**
+- Gradle
+- JUnit 5
+
+## Communication
+
+### gRPC
+
+The Java desktop client uses **gRPC** for communication with the server.
+
+The communication contract is defined using Protocol Buffers, allowing the required Java stubs to be generated automatically during the Gradle build.
+
+In addition to regular RPC calls, the application uses **server-side streaming** to propagate updates to connected clients when the state of the competition changes.
+
+### REST API
+
+A separate Spring Boot module exposes application functionality through a REST API.
+
+The API provides endpoints for managing contest data and is protected using **Spring Security and JWT authentication**.
+
+### Real-Time Updates
+
+The system supports real-time communication through:
+
+- gRPC streaming for the Java desktop client
+- WebSocket notifications for the web client
+
+This allows connected clients to receive updates without continuously polling the server.
+
+## Persistence
+
+Application data is stored in a **SQLite** database.
+
+The persistence layer uses **Hibernate ORM** and follows the Repository pattern, separating database operations from the application's business logic.
+
+This provides a clear separation between:
+
+```text
+UI → Communication Layer → Service Layer → Repository Layer → Database
 ```
 
----
+## Web Client
 
-# Model
+The web interface is implemented using **React** and **Vite**.
 
-Pachetul `model` contine entitatile domeniului.
+It communicates with the Spring Boot backend through HTTP REST requests and supports authenticated access using JWT tokens.
 
-### Child
-Reprezinta un copil participant la competitie.
+During local development, the frontend runs on:
 
-Campuri:
-- `id`
-- `name`
-- `cnp`
-- `age`
+```text
+http://localhost:5173
+```
 
----
+and the REST API runs on:
 
-### Event
-Reprezinta o proba sportiva.
+```text
+http://localhost:8080
+```
 
-Campuri:
-- `id`
-- `name`
-- `distance`
-- `minAge`
-- `maxAge`
+CORS is configured on the backend to allow communication between the React development server and the REST API.
 
-Contine metoda:
-- `isAllowedForAge(int age)` – verifica daca un copil poate participa la proba in functie de varsta.
+## Running the Project
 
----
+### Requirements
 
-### Registration
-Reprezinta inscrierea unui copil la o proba.
+- Java 17+
+- Node.js and npm
+- Git
 
-Campuri:
-- `id`
-- `childId`
-- `eventId`
+Clone the repository:
 
----
+```bash
+git clone https://github.com/victor-moga30/mpp-swimming-contest-app.git
+cd mpp-swimming-contest-app
+```
 
-### User
-Reprezinta un utilizator al aplicatiei (operator de la un oficiu).
+### Build the Java modules
 
-Campuri:
-- `id`
-- `username`
-- `passwordHash`
-- `office`
+On Windows:
 
----
+```bash
+gradlew.bat build
+```
 
-# Repository
+On Linux/macOS:
 
-Pachetul `repository` contine interfete pentru accesul la date.
+```bash
+./gradlew build
+```
 
-### ChildRepository
+### Start the Java server
 
-Operatii:
-- `findByCnp(String cnp)`
-- `findById(long id)`
-- `save(Child child)`
+```bash
+gradlew.bat :server:run
+```
 
----
+### Start the JavaFX client
 
-### EventRepository
+```bash
+gradlew.bat :client:run
+```
 
-Operatii:
-- `findById(long id)`
-- `findAll()`
+### Start the REST server
 
----
+```bash
+gradlew.bat :rest-server:bootRun
+```
 
-### RegistrationRepository
+The REST API will be available at:
 
-Operatii:
-- `findByChildId(long childId)`
-- `findByEventId(long eventId)`
-- `save(Registration registration)`
-- `delete(Registration registration)`
+```text
+http://localhost:8080
+```
 
----
+### Start the React client
 
-### UserRepository
+```bash
+cd web-client-react
+npm install
+npm run dev
+```
 
-Operatii:
-- `findByUsername(String username)`
+The web application will be available at:
 
----
+```text
+http://localhost:5173
+```
 
-# Stadiul implementarii
+## What This Project Demonstrates
 
-In acest moment sunt implementate:
+This project demonstrates practical experience with:
 
-- entitatile domeniului (`model`)
-- interfetele pentru repository (`repository`)
+- designing multi-module Java applications
+- implementing layered application architectures
+- client-server communication
+- gRPC and Protocol Buffers
+- REST API design
+- ORM and database persistence
+- authentication with JWT
+- real-time communication
+- desktop development with JavaFX
+- frontend development with React
+- integrating multiple clients with a shared backend
 
-Urmeaza sa fie implementate:
+## Author
 
-- repository-uri JDBC
-- conectarea la baza de date SQLite
-- serviciile aplicatiei
-- interfata grafica
-## Implementare gRPC - Java (Server)
+**Victor Moga**
 
-Serverul este implementat in Java si foloseste gRPC pentru a expune functionalitatea aplicatiei.
-
-Fisierul `contest.proto` defineste contractul de comunicare (mesaje si metode RPC). Acesta se afla in:
-
-common/src/main/proto/contest.proto
-
-Pe baza acestuia, Gradle genereaza automat clasele Java necesare (stub-uri gRPC), folosind pluginul:
-
-com.google.protobuf
-
-Clasele generate sunt folosite in implementarea serviciului:
-
-ro.mpp2026.server.ContestGrpcService
-
-Aceasta clasa extinde:
-
-ContestRpcGrpc.ContestRpcImplBase
-
-si implementeaza metodele definite in `.proto`, apelând logica existenta din `ContestService`.
-
-Serverulz este pornit din clasa:
-
-ro.mpp2026.server.StartGrpcServer
-
-si ruleaza pe portul:
-
-55556
-
-Pentru notificari in timp real se foloseste streaming gRPC (server → client), prin metoda:
-
-SubscribeUpdates
-
-Serverul pastreaza lista clientilor conectati si trimite notificari atunci cand apar modificari (ex: inscriere copil).
+Computer Science student at Babeș-Bolyai University.
