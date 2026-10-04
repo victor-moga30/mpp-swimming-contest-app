@@ -1,165 +1,232 @@
-# Swimming Contest Management Application
+# Swimming Contest Management Platform
 
-A full-stack client-server application for managing registrations and events in a swimming competition.
+A multi-client distributed application for managing participants, events, and registrations in a swimming contest.
 
-The project was developed as part of the **Systems for Design and Implementation (MPP)** course and progressively extended from a Java desktop application into a distributed system with **gRPC communication, persistence, REST services, authentication, real-time notifications, and a React web client**.
+The project demonstrates several communication and application architectures within the same system, including a JavaFX desktop client, a Spring Boot REST API, a React web client, gRPC-based communication, JWT authentication, WebSocket support, and database persistence.
 
 ## Features
 
-- User authentication for competition operators
-- Management of swimming contest events
-- Registration of participants for eligible events
-- Age-based event eligibility validation
-- Search and filtering of participants and events
-- Persistent storage using SQLite
-- Hibernate ORM for database persistence
-- Desktop client built with JavaFX
-- Client-server communication using gRPC and Protocol Buffers
-- Real-time server-to-client updates using gRPC streaming
-- REST API implemented with Spring Boot
-- JWT-based authentication and authorization
-- WebSocket support for real-time web notifications
-- React web interface for interacting with REST services
-- Dedicated Java client for testing and consuming the REST API
+- Manage contest participants and events
+- Register participants for eligible swimming events
+- Validate participant eligibility based on age
+- Search and retrieve participant and registration data
+- Multi-client architecture
+- JavaFX desktop client
+- React web client
+- REST API
+- JWT-based authentication
+- Real-time communication support
+- gRPC communication with Protocol Buffers
+- Server-side streaming for client updates
+- SQLite persistence
+- Hibernate-based data access
+
+## Tech Stack
+
+### Backend
+- Java 17
+- Spring Boot 3.3
+- Spring Security
+- Hibernate
+- SQLite
+- Gradle
+
+### Communication
+- REST
+- gRPC
+- Protocol Buffers
+- WebSocket
+- Server-side streaming
+
+### Frontend
+- React 19
+- Vite
+- JavaFX 17
+- FXML
+
+### Security
+- JWT authentication
+- Spring Security
 
 ## Architecture
 
-The application follows a modular client-server architecture.
+The repository is organized as a multi-module Gradle project.
 
 ```text
-mpp-swimming-contest-app
+mpp-swimming-contest-app/
 │
-├── common
-│   ├── Domain models
-│   ├── DTOs
-│   ├── Repository interfaces
-│   └── Protocol Buffer / gRPC definitions
+├── common/
+│   ├── shared domain models
+│   ├── communication contracts
+│   └── Protocol Buffer definitions
 │
-├── server
-│   ├── Business logic
-│   ├── Repository implementations
-│   ├── Hibernate persistence
+├── server/
+│   ├── business logic
+│   ├── database persistence
 │   └── gRPC server
 │
-├── client
+├── client/
 │   └── JavaFX desktop client
 │
-├── rest-server
+├── rest-server/
 │   ├── Spring Boot REST API
-│   ├── Spring Security
-│   ├── JWT authentication
-│   └── WebSocket notifications
+│   ├── authentication and security
+│   └── WebSocket support
 │
-├── rest-client-java
+├── rest-client-java/
 │   └── Java REST client
 │
-└── web-client-react
-    └── React + Vite web client
+└── web-client-react/
+    └── React web application
 ```
 
-The shared `common` module contains the domain model and communication contracts used by the Java components.
+The application separates shared domain logic, server-side functionality, communication layers, and client implementations into independent modules.
 
-The desktop application communicates with the server through **gRPC**, while the web application interacts with the system through the **Spring Boot REST API**.
+## Domain Model
 
-## Technologies
+The main entities of the application are:
 
-**Backend**
-- Java 17
-- Spring Boot 3
-- Spring Security
-- Hibernate ORM
-- SQLite
-- gRPC
-- Protocol Buffers
-- WebSockets
-- JWT
-- Log4j2
+### Participant
 
-**Desktop**
-- JavaFX
+Represents a participant registered in the contest.
 
-**Frontend**
-- React 19
-- Vite
-- JavaScript
+Typical information includes:
 
-**Build & Testing**
-- Gradle
-- JUnit 5
+- identifier
+- name
+- personal identifier
+- age
 
-## Communication
+### Event
 
-### gRPC
+Represents a swimming event.
 
-The Java desktop client uses **gRPC** for communication with the server.
+Each event contains information such as:
 
-The communication contract is defined using Protocol Buffers, allowing the required Java stubs to be generated automatically during the Gradle build.
+- event name
+- distance
+- minimum age
+- maximum age
 
-In addition to regular RPC calls, the application uses **server-side streaming** to propagate updates to connected clients when the state of the competition changes.
+Eligibility can be checked based on the participant's age.
+
+### Registration
+
+Represents the association between a participant and a swimming event.
+
+### User
+
+Represents an application operator who can authenticate and manage contest data.
+
+## Communication Layers
 
 ### REST API
 
-A separate Spring Boot module exposes application functionality through a REST API.
+The `rest-server` module exposes application functionality through a Spring Boot REST API.
 
-The API provides endpoints for managing contest data and is protected using **Spring Security and JWT authentication**.
+The REST backend uses:
+
+- Spring Boot
+- Spring Security
+- JWT
+- Hibernate
+- SQLite
+- WebSocket support
+
+A dedicated Java REST client is also included in the project.
+
+### gRPC
+
+The application also implements gRPC communication between Java clients and the server.
+
+The communication contract is defined using Protocol Buffers.
+
+```text
+common/src/main/proto/contest.proto
+```
+
+The generated Java stubs are used by the server and clients to invoke remote procedures.
+
+The gRPC service extends:
+
+```text
+ContestRpcGrpc.ContestRpcImplBase
+```
+
+and delegates application operations to the existing service layer.
 
 ### Real-Time Updates
 
-The system supports real-time communication through:
+The gRPC implementation supports server-side streaming through:
 
-- gRPC streaming for the Java desktop client
-- WebSocket notifications for the web client
+```text
+SubscribeUpdates
+```
 
-This allows connected clients to receive updates without continuously polling the server.
+Connected clients can subscribe to application updates and receive notifications when relevant changes occur, such as a new participant registration.
+
+The REST module also includes WebSocket support for real-time communication.
+
+## Clients
+
+### JavaFX Desktop Client
+
+The desktop application is implemented using:
+
+- Java 17
+- JavaFX 17
+- FXML
+
+It provides a graphical interface for interacting with the contest management system.
+
+### React Web Client
+
+The web client is implemented using:
+
+- React 19
+- Vite
+- React DOM
+
+It communicates with the application's REST services and provides a browser-based interface for contest management.
 
 ## Persistence
 
-Application data is stored in a **SQLite** database.
+Application data is persisted using:
 
-The persistence layer uses **Hibernate ORM** and follows the Repository pattern, separating database operations from the application's business logic.
+- SQLite
+- Hibernate ORM
 
-This provides a clear separation between:
+The server layer handles database access while keeping persistence logic separated from the presentation layer.
 
-```text
-UI → Communication Layer → Service Layer → Repository Layer → Database
-```
+## Security
 
-## Web Client
+The REST backend uses Spring Security and JWT-based authentication.
 
-The web interface is implemented using **React** and **Vite**.
+Authentication is handled by the server, allowing protected API operations to be accessed only by authenticated users.
 
-It communicates with the Spring Boot backend through HTTP REST requests and supports authenticated access using JWT tokens.
+## Project Modules
 
-During local development, the frontend runs on:
-
-```text
-http://localhost:5173
-```
-
-and the REST API runs on:
-
-```text
-http://localhost:8080
-```
-
-CORS is configured on the backend to allow communication between the React development server and the REST API.
+| Module | Purpose |
+|---|---|
+| `common` | Shared models, interfaces, gRPC contracts, and generated communication classes |
+| `server` | Core server-side logic, persistence, and gRPC services |
+| `client` | JavaFX desktop application |
+| `rest-server` | Spring Boot REST API, security, JWT, and WebSocket functionality |
+| `rest-client-java` | Java client for the REST API |
+| `web-client-react` | React/Vite web client |
 
 ## Running the Project
 
 ### Requirements
 
-- Java 17+
-- Node.js and npm
-- Git
+- Java 17
+- Node.js
+- npm
+- Gradle
 
-Clone the repository:
+The project includes the Gradle Wrapper, so a separate Gradle installation is not required.
 
-```bash
-git clone https://github.com/victor-moga30/mpp-swimming-contest-app.git
-cd mpp-swimming-contest-app
-```
-
-### Build the Java modules
+### Build the Java Modules
 
 On Windows:
 
@@ -173,31 +240,31 @@ On Linux/macOS:
 ./gradlew build
 ```
 
-### Start the Java server
+### Run the JavaFX Client
 
 ```bash
-gradlew.bat :server:run
+./gradlew :client:run
 ```
 
-### Start the JavaFX client
+On Windows:
 
 ```bash
 gradlew.bat :client:run
 ```
 
-### Start the REST server
+### Run the REST Server
+
+```bash
+./gradlew :rest-server:bootRun
+```
+
+On Windows:
 
 ```bash
 gradlew.bat :rest-server:bootRun
 ```
 
-The REST API will be available at:
-
-```text
-http://localhost:8080
-```
-
-### Start the React client
+### Run the React Client
 
 ```bash
 cd web-client-react
@@ -205,30 +272,49 @@ npm install
 npm run dev
 ```
 
-The web application will be available at:
+### Build the React Client
 
-```text
-http://localhost:5173
+```bash
+npm run build
 ```
 
-## What This Project Demonstrates
+## Key Concepts Demonstrated
 
-This project demonstrates practical experience with:
+This project demonstrates:
 
-- designing multi-module Java applications
-- implementing layered application architectures
+- multi-module application design
+- layered software architecture
 - client-server communication
+- REST API development
 - gRPC and Protocol Buffers
-- REST API design
-- ORM and database persistence
-- authentication with JWT
-- real-time communication
-- desktop development with JavaFX
-- frontend development with React
-- integrating multiple clients with a shared backend
+- real-time server-to-client streaming
+- WebSocket integration
+- JWT authentication
+- JavaFX desktop development
+- React frontend development
+- relational database persistence
+- Hibernate ORM
+- separation of domain, service, persistence, and presentation layers
 
-## Author
+## Repository Structure
 
-**Victor Moga**
+```text
+.
+├── client/
+├── common/
+├── rest-client-java/
+├── rest-server/
+├── server/
+├── web-client-react/
+├── gradle/
+├── build.gradle
+├── settings.gradle
+├── gradlew
+└── gradlew.bat
+```
 
-Computer Science student at Babeș-Bolyai University.
+## Purpose
+
+The project was developed as a distributed systems application demonstrating multiple approaches to client-server communication and frontend development within a shared domain.
+
+Rather than relying on a single communication mechanism, the system explores REST, gRPC, streaming, WebSocket communication, desktop UI development, and a modern React frontend while sharing the same core contest-management domain.
